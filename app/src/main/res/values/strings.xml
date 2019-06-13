@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Week2Day3_HW</string>
+    <string name="first_name_hint">Enter First Name</string>
+    <string name="last_name_hint">Enter Last Name</string>
+    <string name="street_hint">Enter Street Name</string>
+    <string name="city_hint">Enter City</string>
+    <string name="state_hint">Enter State</string>
+    <string name="zip_hint">Enter Zip</string>
+    <string name="save_info">Save Info</string>
+</resources>
