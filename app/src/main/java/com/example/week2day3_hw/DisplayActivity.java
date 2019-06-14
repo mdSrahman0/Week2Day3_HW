@@ -32,7 +32,11 @@ public class DisplayActivity extends AppCompatActivity {
 
         // access the sharedPreferences we saved from MainActivity
         sharedPreferences = getSharedPreferences("shared_pref", MODE_PRIVATE);
+
+        // the the string stored in the shared pref
         allInfo = sharedPreferences.getString("user_info", "NO NAME IN SHARED PREF");
+
+        // split that string and store into array
         array = allInfo.split(",");
 
         // if our array does hold information, set the appropriate elements to their respective textviews

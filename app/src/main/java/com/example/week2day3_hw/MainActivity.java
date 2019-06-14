@@ -60,7 +60,15 @@ public class MainActivity extends AppCompatActivity {
         String allInfo = fName + " , " + lName + " , " + street + " , " + city + " , "
                 + state + " , " + zip;
 
-        storeToSharedPref(allInfo);  // call the method to store sharedPref object and the info
+        // if the user adds an input to any of the edit texts and hits save, overwrite the old sharedpref
+        if (!fName.isEmpty() || !lName.isEmpty() || !street.isEmpty() || !city.isEmpty()
+                    || !state.isEmpty() || !zip.isEmpty()) {
+            storeToSharedPref(allInfo);  // call the method to store sharedPref object and the info
+        }
+        // If no information was entered, just display the currently saved shared pref
+        else{
+            startActivity(new Intent(this, DisplayActivity.class));
+        }
     }
 
     public void storeToSharedPref(String allInfo){
